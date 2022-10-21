@@ -1,16 +1,16 @@
 import styles from './Container.module.scss';
 import Timer from '../Timer/Timer';
 import Buttons from '../Buttons/Buttons';
-import useState from 'react';
-import useEffect from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-function Container () {
+const Container = () =>{
 
     const [start, setStart] = useState(false);
     const [stop, setStop] = useState(true);
     const [clock, setClock] = useState(0);
 
-    useEffect(() => {
+    useEffect (() => {
         let interval = null;
     
         if (start && stop === false) {
